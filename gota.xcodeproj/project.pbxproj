@@ -22,6 +22,9 @@
 		148B15011985BB3C00357F28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 148B14E01985BB3C00357F28 /* UIKit.framework */; };
 		148B15091985BB3C00357F28 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 148B15071985BB3C00357F28 /* InfoPlist.strings */; };
 		148B150B1985BB3C00357F28 /* gotaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B150A1985BB3C00357F28 /* gotaTests.m */; };
+		148B15161985C03700357F28 /* SMMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B15151985C03700357F28 /* SMMapController.m */; };
+		148B15181985C38800357F28 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 148B15171985C38800357F28 /* GLKit.framework */; };
+		148B151A1985DD7400357F28 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 148B15191985DD7400357F28 /* map.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,10 @@
 		148B15061985BB3C00357F28 /* gotaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "gotaTests-Info.plist"; sourceTree = "<group>"; };
 		148B15081985BB3C00357F28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		148B150A1985BB3C00357F28 /* gotaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gotaTests.m; sourceTree = "<group>"; };
+		148B15141985C03700357F28 /* SMMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMMapController.h; sourceTree = "<group>"; };
+		148B15151985C03700357F28 /* SMMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMMapController.m; sourceTree = "<group>"; };
+		148B15171985C38800357F28 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		148B15191985DD7400357F28 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				148B15181985C38800357F28 /* GLKit.framework in Frameworks */,
 				148B14DF1985BB3C00357F28 /* CoreGraphics.framework in Frameworks */,
 				148B14E11985BB3C00357F28 /* UIKit.framework in Frameworks */,
 				148B14DD1985BB3C00357F28 /* Foundation.framework in Frameworks */,
@@ -103,6 +111,7 @@
 		148B14DB1985BB3C00357F28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				148B15171985C38800357F28 /* GLKit.framework */,
 				148B14DC1985BB3C00357F28 /* Foundation.framework */,
 				148B14DE1985BB3C00357F28 /* CoreGraphics.framework */,
 				148B14E01985BB3C00357F28 /* UIKit.framework */,
@@ -114,6 +123,7 @@
 		148B14E21985BB3C00357F28 /* gota */ = {
 			isa = PBXGroup;
 			children = (
+				148B15191985DD7400357F28 /* map.png */,
 				148B14EB1985BB3C00357F28 /* SMAppDelegate.h */,
 				148B14EC1985BB3C00357F28 /* SMAppDelegate.m */,
 				148B14EE1985BB3C00357F28 /* Main_iPhone.storyboard */,
@@ -122,6 +132,8 @@
 				148B14F51985BB3C00357F28 /* SMViewController.m */,
 				148B14F71985BB3C00357F28 /* Images.xcassets */,
 				148B14E31985BB3C00357F28 /* Supporting Files */,
+				148B15141985C03700357F28 /* SMMapController.h */,
+				148B15151985C03700357F28 /* SMMapController.m */,
 			);
 			path = gota;
 			sourceTree = "<group>";
@@ -233,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				148B14F31985BB3C00357F28 /* Main_iPad.storyboard in Resources */,
+				148B151A1985DD7400357F28 /* map.png in Resources */,
 				148B14F81985BB3C00357F28 /* Images.xcassets in Resources */,
 				148B14F01985BB3C00357F28 /* Main_iPhone.storyboard in Resources */,
 				148B14E71985BB3C00357F28 /* InfoPlist.strings in Resources */,
@@ -256,6 +269,7 @@
 			files = (
 				148B14ED1985BB3C00357F28 /* SMAppDelegate.m in Sources */,
 				148B14F61985BB3C00357F28 /* SMViewController.m in Sources */,
+				148B15161985C03700357F28 /* SMMapController.m in Sources */,
 				148B14E91985BB3C00357F28 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
