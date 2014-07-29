@@ -1,0 +1,8 @@
+Random thoughts...
+
+- Refactor opengl stuff into separate 'rendering' class
+- init/setup - accept a list of provinces (which contain vertices to set up),
+  do all world map
+  vertices in dictionary? (tuple like?) Bah, want Python!
+- drawControl(provinces, colour), drawIncognito(provinces)
+- methods: world map, + 'draw provinces'

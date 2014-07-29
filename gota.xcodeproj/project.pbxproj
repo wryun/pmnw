@@ -25,6 +25,7 @@
 		148B15161985C03700357F28 /* SMMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148B15151985C03700357F28 /* SMMapController.m */; };
 		148B15181985C38800357F28 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 148B15171985C38800357F28 /* GLKit.framework */; };
 		148B151A1985DD7400357F28 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 148B15191985DD7400357F28 /* map.png */; };
+		14C2FCC9198607A600EC6EBC /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 14C2FCC8198607A600EC6EBC /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		148B15151985C03700357F28 /* SMMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMMapController.m; sourceTree = "<group>"; };
 		148B15171985C38800357F28 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		148B15191985DD7400357F28 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		14C2FCC8198607A600EC6EBC /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				148B15191985DD7400357F28 /* map.png */,
+				14C2FCC8198607A600EC6EBC /* background.jpg */,
 				148B14EB1985BB3C00357F28 /* SMAppDelegate.h */,
 				148B14EC1985BB3C00357F28 /* SMAppDelegate.m */,
 				148B14EE1985BB3C00357F28 /* Main_iPhone.storyboard */,
@@ -247,6 +250,7 @@
 				148B14F31985BB3C00357F28 /* Main_iPad.storyboard in Resources */,
 				148B151A1985DD7400357F28 /* map.png in Resources */,
 				148B14F81985BB3C00357F28 /* Images.xcassets in Resources */,
+				14C2FCC9198607A600EC6EBC /* background.jpg in Resources */,
 				148B14F01985BB3C00357F28 /* Main_iPhone.storyboard in Resources */,
 				148B14E71985BB3C00357F28 /* InfoPlist.strings in Resources */,
 			);
@@ -485,6 +489,7 @@
 				148B15101985BB3C00357F28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		148B15111985BB3C00357F28 /* Build configuration list for PBXNativeTarget "gotaTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +498,7 @@
 				148B15131985BB3C00357F28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

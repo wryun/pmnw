@@ -31,16 +31,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3I-rc-PYF">
-                                <rect key="frame" x="127" y="273" width="67" height="22"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="x1B-i1-nWD">
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3I-rc-PYF">
+                                <rect key="frame" x="253" y="205" width="67" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="Kf8-9d-PpZ"/>
+                                </constraints>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="0.44699913723935514" blue="0.18535542295259055" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="rMs-B4-oVp" kind="push" id="jlm-Hd-0ss"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="x1B-i1-nWD" secondAttribute="trailing" id="FsA-yb-T6P"/>
+                            <constraint firstItem="x1B-i1-nWD" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="1" id="L1E-rs-iMK"/>
+                            <constraint firstItem="x1B-i1-nWD" firstAttribute="trailing" secondItem="t3I-rc-PYF" secondAttribute="trailing" id="MAf-42-Rtp"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="t3I-rc-PYF" secondAttribute="bottom" constant="341" id="dT3-ED-A9S"/>
+                            <constraint firstItem="x1B-i1-nWD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ldV-cd-SYZ"/>
+                            <constraint firstAttribute="bottom" secondItem="x1B-i1-nWD" secondAttribute="bottom" id="n5d-EV-bUV"/>
+                            <constraint firstItem="t3I-rc-PYF" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="141" id="oFA-nb-nZv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Gold of the Americas" id="kVd-T7-D41">
                         <barButtonItem key="backBarButtonItem" title="Menu" id="zbq-Tw-Ln9"/>
@@ -50,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="365" y="55"/>
         </scene>
-        <!--Map Controller - Spain (1490 - Turn 1)-->
+        <!--Map Controller - Spain (1490)-->
         <scene sceneID="rHr-3a-7gO">
             <objects>
                 <viewController id="rMs-B4-oVp" customClass="SMMapController" sceneMemberID="viewController">
@@ -59,18 +77,20 @@
                         <viewControllerLayoutGuide type="bottom" id="9S7-Dg-lVd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xhC-jo-wpX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="550" height="1200"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4n-zO-Yy1">
-                                <rect key="frame" x="0.0" y="64" width="320" height="736"/>
+                                <rect key="frame" x="0.0" y="64" width="550" height="1136"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" drawableDepthFormat="24" drawableStencilFormat="8" translatesAutoresizingMaskIntoConstraints="NO" id="HWK-Vx-f1b">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="736"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="550" height="1136"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <gestureRecognizers/>
                                         <connections>
                                             <outlet property="delegate" destination="rMs-B4-oVp" id="3Tu-MC-O47"/>
+                                            <outletCollection property="gestureRecognizers" destination="MZR-l5-pMY" appends="YES" id="L8d-TO-Fai"/>
                                         </connections>
                                     </glkView>
                                 </subviews>
@@ -90,21 +110,30 @@
                             <constraint firstItem="a4n-zO-Yy1" firstAttribute="top" secondItem="CVz-Vh-syh" secondAttribute="top" id="w7M-TL-Yar"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Spain (1490 - Turn 1)" id="xyZ-h2-zu2">
+                    <navigationItem key="navigationItem" title="Spain (1490)" id="xyZ-h2-zu2">
                         <barButtonItem key="backBarButtonItem" title="Map" id="8Jw-3S-Q3H"/>
+                        <barButtonItem key="rightBarButtonItem" title="End Turn" id="Iy0-WC-i6F"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="800"/>
+                    <size key="freeformSize" width="550" height="1200"/>
                     <connections>
                         <outlet property="mapView" destination="HWK-Vx-f1b" id="nj5-q9-2SJ"/>
                         <outlet property="scrollView" destination="a4n-zO-Yy1" id="Bv6-Ax-0n8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPm-io-Gmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MZR-l5-pMY">
+                    <connections>
+                        <action selector="handleMapTap:" destination="rMs-B4-oVp" id="Ep6-vy-D3G"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="962" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.jpg" width="800" height="1048"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
