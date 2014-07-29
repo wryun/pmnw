@@ -257,6 +257,7 @@ const GLubyte province2[] = {
 }
 
 - (void)setupGL {
+    // TODO err this is dumb because I need to cleanup the buffers
     GLuint name;
     
     self.mapView.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
@@ -381,6 +382,24 @@ const GLubyte province2[] = {
         [self.mapView setNeedsDisplay];
         CGPoint tapLocation = [sender locationInView:self.mapView];
         NSLog(@"tapped: %f, %f", tapLocation.x, tapLocation.y);
+        
+        // Are we in Nevada?
+        CGPoint points[] = {
+            {-0.570248, 0.515789},
+            {-0.570248, 0.778947},
+            {-0.636364, 0.778947},
+            {-0.768595, 0.694737},
+            {-0.768595, 0.515789}
+        };
+        CGSize mapViewSize = self.mapView.frame.size;
+        CGAffineTransform cgat = CGAffineTransformIdentity;
+        cgat = CGAffineTransformScale(cgat, mapViewSize.width / 2, mapViewSize.height / 2);
+        cgat = CGAffineTransformTranslate(cgat, 1.0, 1.0);
+        cgat = CGAffineTransformScale(cgat, 1, -1);
+        CGMutablePathRef path = CGPathCreateMutable();
+        CGPathAddLines(path, &cgat, points, sizeof(points) / sizeof(points[0]));
+        NSLog(@"contains point %d", CGPathContainsPoint(path, NULL, tapLocation, TRUE));
+        // --------------------------
     }
 }
 
